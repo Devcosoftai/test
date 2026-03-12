@@ -1,0 +1,48 @@
+﻿.pageHeader {
+  min-height: 42vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 140px 5vw 60px;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.pageHeader::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(203, 213, 225, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.inner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 0.7s ease both;
+}
+
+.inner .section-sub {
+  margin-top: 1rem;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    min-height: 36vh;
+    padding: 120px 5vw 50px;
+  }
+}
+
