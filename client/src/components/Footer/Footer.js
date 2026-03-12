@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Brand */}
         <div className={styles.brand}>
           <Link to="/" className={styles.logo}>
-            DevCo<span className={styles.logoAccent}>Soft</span>.ai
+            DevCo<span className={styles.logoAccent}>Soft</span>.ai Pvt Ltd
           </Link>
           <p className={styles.brandDesc}>
             Building scalable digital solutions with modern technologies.
