@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -6,31 +6,24 @@ import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
-import { useButtonEffects } from './hooks/useButtonEffects';
-import { usePointerAnimation } from './hooks/usePointerAnimation';
-import './styles/globals.css';
+import { Box } from '@chakra-ui/react';
 
 function App() {
-// Initialize button mouse effects
-  useButtonEffects();
-  // Initialize premium pointer animation
-  usePointerAnimation();
-
   return (
-    <Router>
-      <div className="App">
+    <Box className="App" minH="100vh">
+      <Router>
         <Navbar />
-        <main>
+        <Box as="main" flex="1">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
-        </main>
+        </Box>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </Box>
   );
 }
 

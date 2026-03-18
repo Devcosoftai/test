@@ -110,9 +110,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body.cursor-none * {
-  cursor: none !important;
-}
+
 
 /* Enhanced grid background with aurora tint */
 body::before {
@@ -532,52 +530,7 @@ button {
   margin-bottom: 0.3rem;
 }
 
-/* ===== PREMIUM ANIMATED POINTER (Custom Cursor + Trail) ===== */
-.cursor-follower {
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  border: 2px solid var(--cyan);
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--green) 0%, transparent 50%),
-              radial-gradient(circle at 70% 70%, var(--purple) 0%, transparent 50%);
-  box-shadow: 
-    0 0 12px var(--cyan-glow),
-    0 0 24px var(--green-glow),
-    inset 0 0 8px rgba(255,255,255,0.1);
-  pointer-events: none;
-  z-index: 9999;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  mix-blend-mode: screen;
-  backdrop-filter: blur(1px);
-}
 
-.cursor-follower--hover {
-  width: 44px !important;
-  height: 44px !important;
-  border-width: 3px;
-  border-color: var(--green);
-  background: radial-gradient(circle at 30% 30%, var(--cyan) 0%, transparent 50%),
-              radial-gradient(circle at 70% 70%, var(--amber) 0%, transparent 50%);
-  box-shadow: 
-    0 0 20px var(--green-glow),
-    0 0 40px var(--purple-glow),
-    0 0 60px rgba(52, 211, 153, 0.3),
-    inset 0 0 12px rgba(255,255,255,0.2);
-  transform: scale(1.1);
-}
-
-/* Trail particles (created dynamically by JS) */
-.cursor-follower > div {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--cyan), var(--purple));
-  box-shadow: 0 0 8px var(--cyan-glow);
-  pointer-events: none;
-  z-index: -1;
-}
 
 /* ===== RESPONSIVE UTILITIES ===== */
 @media (max-width: 768px) {
@@ -593,10 +546,7 @@ button {
     font-size: clamp(1.8rem, 5vw, 2.4rem);
   }
 
-  /* Hide custom cursor on mobile */
-  .cursor-follower {
-    display: none !important;
-  }
+
 }
 
 /* ===== ANIMATED BACKGROUND ORBS ===== */
