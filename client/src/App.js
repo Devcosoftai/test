@@ -7,11 +7,14 @@ import ServicesPage from './pages/ServicesPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import { useButtonEffects } from './hooks/useButtonEffects';
+import { usePointerAnimation } from './hooks/usePointerAnimation';
 import './styles/globals.css';
 
 function App() {
-  // Initialize button mouse effects
+// Initialize button mouse effects
   useButtonEffects();
+  // Initialize premium pointer animation
+  usePointerAnimation();
 
   return (
     <Router>
